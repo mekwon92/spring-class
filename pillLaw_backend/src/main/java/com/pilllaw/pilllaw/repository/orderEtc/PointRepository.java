@@ -7,5 +7,5 @@ import com.pilllaw.pilllaw.entity.orderEtc.Point;
 import java.util.List;
 
 public interface PointRepository extends JpaRepository<Point, Long> {
-  List<Point> findByMemberMno(Long mno);
+  // List<Point> findByMemberMno(Long mno);
 }

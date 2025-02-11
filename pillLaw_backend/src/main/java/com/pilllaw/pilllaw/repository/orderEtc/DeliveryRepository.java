@@ -7,5 +7,5 @@ import com.pilllaw.pilllaw.entity.orderEtc.Delivery;
 import java.util.Optional;
 
 public interface DeliveryRepository extends JpaRepository<Delivery, Long> {
-  Optional<Delivery> findByOrderOno(Long ono);
+  // Optional<Delivery> findByOrderOno(Long ono);
 }

@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.pilllaw.pilllaw.entity.BaseEntity;
+import com.pilllaw.pilllaw.entity.member.Member;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -33,12 +35,12 @@ public class Cart extends BaseEntity {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long cno;
 
-  // @OneToOne(fetch = FetchType.LAZY)
-  // @JoinColumn(name = "mno", nullable = false, unique = true)
-  // private Member member;
+  @OneToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "mno", nullable = false, unique = true)
+  private Member member;
 
-  // @Builder.Default
-  // @Setter
-  // @OneToMany(fetch = FetchType.LAZY, mappedBy = "cart", orphanRemoval = true, cascade = CascadeType.ALL)
-  // private List<CartItem> cartItems = new ArrayList<>();  
+  @Builder.Default
+  @Setter
+  @OneToMany(fetch = FetchType.LAZY, mappedBy = "cart", orphanRemoval = true, cascade = CascadeType.ALL)
+  private List<CartItem> cartItems = new ArrayList<>();  
 }

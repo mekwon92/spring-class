@@ -1,5 +1,7 @@
 package com.pilllaw.pilllaw.entity.order;
 
+import com.pilllaw.pilllaw.entity.product.Product;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,9 +18,9 @@ public class CartItem {
   @JoinColumn(name = "cno", nullable = false)
   private Cart cart;
 
-  // @ManyToOne
-  // @JoinColumn(name = "pno", nullable = false)
-  // private Product product;
+  @ManyToOne
+  @JoinColumn(name = "pno", nullable = false)
+  private Product product;
 
   private long subday;
   private long quantity;

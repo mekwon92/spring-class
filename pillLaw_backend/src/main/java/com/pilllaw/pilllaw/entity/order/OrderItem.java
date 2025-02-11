@@ -1,5 +1,7 @@
 package com.pilllaw.pilllaw.entity.order;
 
+import com.pilllaw.pilllaw.entity.product.Product;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,9 +23,9 @@ public class OrderItem {
   @JoinColumn(name = "ono", nullable = false)
   private Order order;
 
-  // @ManyToOne
-  // @JoinColumn(name = "pno", nullable = false)
-  // private Product product;
+  @ManyToOne
+  @JoinColumn(name = "pno", nullable = false)
+  private Product product;
 
   private long price;
   private long subday;

@@ -7,8 +7,8 @@ spring:
       max-file-size: 10MB
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mariadb://np.eeerrorcode.com:3306/pilllaw
-    username: madmin
+    url: jdbc:log4jdbc:mariadb://np.me92100984.com:3306/myfinal
+    username: myfinal
     password: 1234
   jpa:
     hibernate:
@@ -24,9 +24,3 @@ spring:
       - src/main/java
       - src/main/resources
       - templates
-  # security:
-  #   user:
-  #     name: user1
-  #     password: $2a$10$.JMquKR6u49eIKcQhbVLiuruKllowii8v0EdgET3qfyhljt/LOI3K #1234
-  #     roles:
-  #     - USER

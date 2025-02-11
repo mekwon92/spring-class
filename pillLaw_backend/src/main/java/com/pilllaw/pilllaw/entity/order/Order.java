@@ -1,6 +1,7 @@
 package com.pilllaw.pilllaw.entity.order;
 
 import com.pilllaw.pilllaw.entity.BaseEntity;
+import com.pilllaw.pilllaw.entity.member.Member;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -28,9 +29,9 @@ public class Order extends BaseEntity{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ono;
 
-    // @ManyToOne
-    // @JoinColumn(name = "mno", nullable = false)
-    // private Member member;
+    @ManyToOne
+    @JoinColumn(name = "mno", nullable = false)
+    private Member member;
 
     private String name;
     private String tel;
