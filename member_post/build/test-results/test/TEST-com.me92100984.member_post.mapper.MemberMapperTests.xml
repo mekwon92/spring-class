@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.member_post.mapper.MemberMapperTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-12-20T05:30:15" hostname="DESKTOP-9K31RKJ" time="0.034">
+  <properties/>
+  <testcase name="MemberMapper 생성 여부 확인" classname="com.me92100984.member_post.mapper.MemberMapperTests" time="0.006"/>
+  <testcase name="testSignin()" classname="com.me92100984.member_post.mapper.MemberMapperTests" time="0.022"/>
+  <testcase name="testSignup()" classname="com.me92100984.member_post.mapper.MemberMapperTests" time="0.004"/>
+  <system-out><![CDATA[[INFO ] 2024-12-20 14:30:15.349 jdbc.sqltiming - select * from tbl_member where id = 'abcd'
+ {executed in 4 msec}
+[INFO ] 2024-12-20 14:30:15.352 jdbc.resultsettable - 
+|-----|-----|-----|------|----------|------------|----------------------|
+|id   |pw   |name |email |road_addr |detail_addr |regdate               |
+|-----|-----|-----|------|----------|------------|----------------------|
+|abcd |1234 |새똥이  |null  |null      |null        |2024-11-04 02:05:19.0 |
+|-----|-----|-----|------|----------|------------|----------------------|
+
+[INFO ] 2024-12-20 14:30:15.352 member_post.mapper.MemberMapperTests - Member(id=abcd, pw=1234, name=새똥이, email=null, roadAddr=null, detailAddr=null, regdate=Mon Nov 04 02:05:19 KST 2024)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

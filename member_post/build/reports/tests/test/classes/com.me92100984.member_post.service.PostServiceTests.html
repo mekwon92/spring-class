@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PostServiceTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PostServiceTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.me92100984.member_post.service.html">com.me92100984.member_post.service</a> &gt; PostServiceTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.086s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testOne()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testimpl()</td>
+<td class="success">0.053s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testlist()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>[INFO ] 2024-12-20 14:30:15.510 jdbc.sqltiming - select tp.*, 1 from tbl_post tp where pno = 3
+ {executed in 3 msec}
+[INFO ] 2024-12-20 14:30:15.511 jdbc.resultsettable - 
+|----|------|-------|--------|-----------|--------|-----------|----|--|
+|pno |title |writer |content |view_count |regdate |updatedate |cno |1 |
+|----|------|-------|--------|-----------|--------|-----------|----|--|
+|----|------|-------|--------|-----------|--------|-----------|----|--|
+
+[INFO ] 2024-12-20 14:30:15.512 member_post.service.PostServiceTests - null
+[INFO ] 2024-12-20 14:30:15.537 jdbc.sqltiming - select tp.*, (select count(*) from tbl_attach ta where ta.pno = tp.pno) attach_flag 
+    from tbl_post tp
+    where cno = 2
+
+    order by 1 desc 
+    limit 10 offset 0
+ {executed in 5 msec}
+[INFO ] 2024-12-20 14:30:15.545 jdbc.resultsettable - 
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+|pno |title     |writer |content         |view_count |regdate               |updatedate            |cno |attach_flag |
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+|290 |33        |abcd   |333             |1          |2024-12-20 03:53:21.0 |2024-12-20 03:53:21.0 |2   |true        |
+|288 |dddd11111 |abcd   |dddddd111111111 |13         |2024-12-17 03:13:53.0 |2024-12-17 08:37:03.0 |2   |false       |
+|287 |안녕 스프링33  |abcd   |33              |5          |2024-12-16 07:40:30.0 |2024-12-17 03:06:45.0 |2   |false       |
+|286 |왜?        |abcd   |22              |2          |2024-12-16 07:08:34.0 |2024-12-16 07:08:34.0 |2   |false       |
+|284 |제목        |null   |내용              |3          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|283 |제목        |null   |내용              |0          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|282 |제목        |null   |내용              |0          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|281 |asdf      |mekwon |asdf            |2          |2024-12-09 01:45:01.0 |2024-12-09 01:45:01.0 |2   |false       |
+|280 |          |mekwon |                |0          |2024-11-26 02:27:48.0 |2024-11-26 02:27:48.0 |2   |false       |
+|279 |att       |mekwon |at              |154        |2024-11-14 01:28:15.0 |2024-11-14 01:28:15.0 |2   |true        |
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+
+[INFO ] 2024-12-20 14:30:15.562 member_post.service.PostServiceTests - [Post(pno=290, title=33, writer=abcd, content=333, viewCount=1, regdate=Fri Dec 20 03:53:21 KST 2024, updatedate=Fri Dec 20 03:53:21 KST 2024, cno=2, attachFlag=true, attachs=[]), Post(pno=288, title=dddd11111, writer=abcd, content=dddddd111111111, viewCount=13, regdate=Tue Dec 17 03:13:53 KST 2024, updatedate=Tue Dec 17 08:37:03 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=287, title=안녕 스프링33, writer=abcd, content=33, viewCount=5, regdate=Mon Dec 16 07:40:30 KST 2024, updatedate=Tue Dec 17 03:06:45 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=286, title=왜?, writer=abcd, content=22, viewCount=2, regdate=Mon Dec 16 07:08:34 KST 2024, updatedate=Mon Dec 16 07:08:34 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=284, title=제목, writer=null, content=내용, viewCount=3, regdate=Fri Dec 13 03:06:47 KST 2024, updatedate=Fri Dec 13 03:06:47 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=283, title=제목, writer=null, content=내용, viewCount=0, regdate=Fri Dec 13 03:06:47 KST 2024, updatedate=Fri Dec 13 03:06:47 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=282, title=제목, writer=null, content=내용, viewCount=0, regdate=Fri Dec 13 03:06:47 KST 2024, updatedate=Fri Dec 13 03:06:47 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=281, title=asdf, writer=mekwon, content=asdf, viewCount=2, regdate=Mon Dec 09 01:45:01 KST 2024, updatedate=Mon Dec 09 01:45:01 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=280, title=, writer=mekwon, content=, viewCount=0, regdate=Tue Nov 26 02:27:48 KST 2024, updatedate=Tue Nov 26 02:27:48 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=279, title=att, writer=mekwon, content=at, viewCount=154, regdate=Thu Nov 14 01:28:15 KST 2024, updatedate=Thu Nov 14 01:28:15 KST 2024, cno=2, attachFlag=true, attachs=[])]
+[INFO ] 2024-12-20 14:30:15.580 jdbc.sqltiming - select tp.*, (select count(*) from tbl_attach ta where ta.pno = tp.pno) attach_flag 
+    from tbl_post tp
+    where cno = 2
+
+    order by 1 desc 
+    limit 10 offset 0
+ {executed in 5 msec}
+[INFO ] 2024-12-20 14:30:15.587 jdbc.resultsettable - 
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+|pno |title     |writer |content         |view_count |regdate               |updatedate            |cno |attach_flag |
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+|290 |33        |abcd   |333             |1          |2024-12-20 03:53:21.0 |2024-12-20 03:53:21.0 |2   |true        |
+|288 |dddd11111 |abcd   |dddddd111111111 |13         |2024-12-17 03:13:53.0 |2024-12-17 08:37:03.0 |2   |false       |
+|287 |안녕 스프링33  |abcd   |33              |5          |2024-12-16 07:40:30.0 |2024-12-17 03:06:45.0 |2   |false       |
+|286 |왜?        |abcd   |22              |2          |2024-12-16 07:08:34.0 |2024-12-16 07:08:34.0 |2   |false       |
+|284 |제목        |null   |내용              |3          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|283 |제목        |null   |내용              |0          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|282 |제목        |null   |내용              |0          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|281 |asdf      |mekwon |asdf            |2          |2024-12-09 01:45:01.0 |2024-12-09 01:45:01.0 |2   |false       |
+|280 |          |mekwon |                |0          |2024-11-26 02:27:48.0 |2024-11-26 02:27:48.0 |2   |false       |
+|279 |att       |mekwon |at              |154        |2024-11-14 01:28:15.0 |2024-11-14 01:28:15.0 |2   |true        |
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+
+[INFO ] 2024-12-20 14:30:15.587 member_post.service.PostServiceTests - [Post(pno=290, title=33, writer=abcd, content=333, viewCount=1, regdate=Fri Dec 20 03:53:21 KST 2024, updatedate=Fri Dec 20 03:53:21 KST 2024, cno=2, attachFlag=true, attachs=[]), Post(pno=288, title=dddd11111, writer=abcd, content=dddddd111111111, viewCount=13, regdate=Tue Dec 17 03:13:53 KST 2024, updatedate=Tue Dec 17 08:37:03 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=287, title=안녕 스프링33, writer=abcd, content=33, viewCount=5, regdate=Mon Dec 16 07:40:30 KST 2024, updatedate=Tue Dec 17 03:06:45 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=286, title=왜?, writer=abcd, content=22, viewCount=2, regdate=Mon Dec 16 07:08:34 KST 2024, updatedate=Mon Dec 16 07:08:34 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=284, title=제목, writer=null, content=내용, viewCount=3, regdate=Fri Dec 13 03:06:47 KST 2024, updatedate=Fri Dec 13 03:06:47 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=283, title=제목, writer=null, content=내용, viewCount=0, regdate=Fri Dec 13 03:06:47 KST 2024, updatedate=Fri Dec 13 03:06:47 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=282, title=제목, writer=null, content=내용, viewCount=0, regdate=Fri Dec 13 03:06:47 KST 2024, updatedate=Fri Dec 13 03:06:47 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=281, title=asdf, writer=mekwon, content=asdf, viewCount=2, regdate=Mon Dec 09 01:45:01 KST 2024, updatedate=Mon Dec 09 01:45:01 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=280, title=, writer=mekwon, content=, viewCount=0, regdate=Tue Nov 26 02:27:48 KST 2024, updatedate=Tue Nov 26 02:27:48 KST 2024, cno=2, attachFlag=false, attachs=[]), Post(pno=279, title=att, writer=mekwon, content=at, viewCount=154, regdate=Thu Nov 14 01:28:15 KST 2024, updatedate=Thu Nov 14 01:28:15 KST 2024, cno=2, attachFlag=true, attachs=[])]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.11.1</a> at 2024. 12. 20. 오후 2:30:15</p>
+</div>
+</div>
+</body>
+</html>

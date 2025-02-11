@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.member_post.mapper.AttachMapperTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-12-20T05:30:15" hostname="DESKTOP-9K31RKJ" time="0.292">
+  <properties/>
+  <testcase name="testConvert2Attach()" classname="com.me92100984.member_post.mapper.AttachMapperTests" time="0.261"/>
+  <testcase name="Attach 객체의 equals()와 hashcode()의 재정의 확인 용도" classname="com.me92100984.member_post.mapper.AttachMapperTests" time="0.012"/>
+  <testcase name="testSelectAttachs()" classname="com.me92100984.member_post.mapper.AttachMapperTests" time="0.017"/>
+  <system-out><![CDATA[[INFO ] 2024-12-20 14:30:15.038 member_post.mapper.AttachMapperTests - Attach(uuid=03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.046 member_post.mapper.AttachMapperTests - Attach(uuid=4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.047 member_post.mapper.AttachMapperTests - Attach(uuid=5ce5762b-3cef-4a84-885f-1e9da3eba7d9.pdf, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.047 member_post.mapper.AttachMapperTests - Attach(uuid=df3e87fc-f0ec-4476-95f1-1bbc147f5b59.docx, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.047 member_post.mapper.AttachMapperTests - Attach(uuid=t_03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.047 member_post.mapper.AttachMapperTests - Attach(uuid=t_4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.047 member_post.mapper.AttachMapperTests - Attach(uuid=실습-010-layout1.pdf, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.047 member_post.mapper.AttachMapperTests - Attach(uuid=실습-011-layout1.pdf, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.048 member_post.mapper.AttachMapperTests - Attach(uuid=실습-012-layout1 (1).pdf, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.048 member_post.mapper.AttachMapperTests - =================================
+[INFO ] 2024-12-20 14:30:15.260 jdbc.sqltiming - select * from tbl_attach where path = '2024/12/20'
+ {executed in 5 msec}
+[INFO ] 2024-12-20 14:30:15.276 jdbc.resultsettable - 
+|------------------------------------------|---------------------------------------------|-----------|------|----|
+|uuid                                      |origin                                       |path       |image |pno |
+|------------------------------------------|---------------------------------------------|-----------|------|----|
+|03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png  |localhost_8080_donation_heaven_index (1).png |2024/12/20 |true  |290 |
+|5ce5762b-3cef-4a84-885f-1e9da3eba7d9.pdf  |01.pdf                                       |2024/12/20 |false |290 |
+|df3e87fc-f0ec-4476-95f1-1bbc147f5b59.docx |관련 안내사항.docx                                 |2024/12/20 |false |290 |
+|------------------------------------------|---------------------------------------------|-----------|------|----|
+
+[INFO ] 2024-12-20 14:30:15.289 member_post.mapper.AttachMapperTests - [Attach(uuid=t_03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png, origin=null, path=null, image=false, pno=null)]
+[INFO ] 2024-12-20 14:30:15.290 member_post.mapper.AttachMapperTests - 1
+[INFO ] 2024-12-20 14:30:15.290 member_post.mapper.AttachMapperTests - Attach(uuid=03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png, origin=localhost_8080_donation_heaven_index (1).png, path=2024/12/20, image=true, pno=290)
+[INFO ] 2024-12-20 14:30:15.290 member_post.mapper.AttachMapperTests - Attach(uuid=5ce5762b-3cef-4a84-885f-1e9da3eba7d9.pdf, origin=01.pdf, path=2024/12/20, image=false, pno=290)
+[INFO ] 2024-12-20 14:30:15.290 member_post.mapper.AttachMapperTests - Attach(uuid=df3e87fc-f0ec-4476-95f1-1bbc147f5b59.docx, origin=관련 안내사항.docx, path=2024/12/20, image=false, pno=290)
+[INFO ] 2024-12-20 14:30:15.291 member_post.mapper.AttachMapperTests - Attach(uuid=t_03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.291 member_post.mapper.AttachMapperTests - =================================
+[INFO ] 2024-12-20 14:30:15.291 member_post.mapper.AttachMapperTests - Attach(uuid=4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.292 member_post.mapper.AttachMapperTests - Attach(uuid=t_4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.292 member_post.mapper.AttachMapperTests - Attach(uuid=실습-010-layout1.pdf, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.292 member_post.mapper.AttachMapperTests - Attach(uuid=실습-011-layout1.pdf, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.292 member_post.mapper.AttachMapperTests - Attach(uuid=실습-012-layout1 (1).pdf, origin=null, path=null, image=false, pno=null)
+[INFO ] 2024-12-20 14:30:15.292 member_post.mapper.AttachMapperTests - 5
+[INFO ] 2024-12-20 14:30:15.305 member_post.mapper.AttachMapperTests - 46728356
+[INFO ] 2024-12-20 14:30:15.305 member_post.mapper.AttachMapperTests - 46728356
+[INFO ] 2024-12-20 14:30:15.306 member_post.mapper.AttachMapperTests - 47651877
+[INFO ] 2024-12-20 14:30:15.306 member_post.mapper.AttachMapperTests - 46728356
+[INFO ] 2024-12-20 14:30:15.306 member_post.mapper.AttachMapperTests - [Attach(uuid=2.jpg, origin=null, path=null, image=false, pno=null), Attach(uuid=1.jpg, origin=null, path=null, image=false, pno=null)]
+[INFO ] 2024-12-20 14:30:15.306 member_post.mapper.AttachMapperTests - 2
+[INFO ] 2024-12-20 14:30:15.316 jdbc.sqltiming - select * from tbl_attach where path = '2024/12/20'
+ {executed in 5 msec}
+[INFO ] 2024-12-20 14:30:15.318 jdbc.resultsettable - 
+|------------------------------------------|---------------------------------------------|-----------|------|----|
+|uuid                                      |origin                                       |path       |image |pno |
+|------------------------------------------|---------------------------------------------|-----------|------|----|
+|03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png  |localhost_8080_donation_heaven_index (1).png |2024/12/20 |true  |290 |
+|5ce5762b-3cef-4a84-885f-1e9da3eba7d9.pdf  |01.pdf                                       |2024/12/20 |false |290 |
+|df3e87fc-f0ec-4476-95f1-1bbc147f5b59.docx |관련 안내사항.docx                                 |2024/12/20 |false |290 |
+|------------------------------------------|---------------------------------------------|-----------|------|----|
+
+[INFO ] 2024-12-20 14:30:15.319 member_post.mapper.AttachMapperTests - Attach(uuid=03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png, origin=localhost_8080_donation_heaven_index (1).png, path=2024/12/20, image=true, pno=290)
+[INFO ] 2024-12-20 14:30:15.319 member_post.mapper.AttachMapperTests - Attach(uuid=5ce5762b-3cef-4a84-885f-1e9da3eba7d9.pdf, origin=01.pdf, path=2024/12/20, image=false, pno=290)
+[INFO ] 2024-12-20 14:30:15.319 member_post.mapper.AttachMapperTests - Attach(uuid=df3e87fc-f0ec-4476-95f1-1bbc147f5b59.docx, origin=관련 안내사항.docx, path=2024/12/20, image=false, pno=290)
+[INFO ] 2024-12-20 14:30:15.319 member_post.mapper.AttachMapperTests - =================================
+[INFO ] 2024-12-20 14:30:15.320 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png
+[INFO ] 2024-12-20 14:30:15.320 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg
+[INFO ] 2024-12-20 14:30:15.320 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\5ce5762b-3cef-4a84-885f-1e9da3eba7d9.pdf
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\df3e87fc-f0ec-4476-95f1-1bbc147f5b59.docx
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\t_03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\t_4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\실습-010-layout1.pdf
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\실습-011-layout1.pdf
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\실습-012-layout1 (1).pdf
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - 9
+[INFO ] 2024-12-20 14:30:15.321 member_post.mapper.AttachMapperTests - =================================
+[INFO ] 2024-12-20 14:30:15.322 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png
+[INFO ] 2024-12-20 14:30:15.322 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\5ce5762b-3cef-4a84-885f-1e9da3eba7d9.pdf
+[INFO ] 2024-12-20 14:30:15.322 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\df3e87fc-f0ec-4476-95f1-1bbc147f5b59.docx
+[INFO ] 2024-12-20 14:30:15.322 member_post.mapper.AttachMapperTests - 3
+[INFO ] 2024-12-20 14:30:15.322 member_post.mapper.AttachMapperTests - =================================
+[INFO ] 2024-12-20 14:30:15.323 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg
+[INFO ] 2024-12-20 14:30:15.323 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\t_03c08a35-e887-45f3-9dba-1c4ad7cfaef4.png
+[INFO ] 2024-12-20 14:30:15.323 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\t_4bf54896-7015-4fd0-88e6-bb95ef6cc2bf.jpg
+[INFO ] 2024-12-20 14:30:15.323 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\실습-010-layout1.pdf
+[INFO ] 2024-12-20 14:30:15.323 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\실습-011-layout1.pdf
+[INFO ] 2024-12-20 14:30:15.323 member_post.mapper.AttachMapperTests - c:\upload\2024\12\20\실습-012-layout1 (1).pdf
+[INFO ] 2024-12-20 14:30:15.323 member_post.mapper.AttachMapperTests - 6
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

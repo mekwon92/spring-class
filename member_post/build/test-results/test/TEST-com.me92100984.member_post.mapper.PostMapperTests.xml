@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.member_post.mapper.PostMapperTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-12-20T05:30:15" hostname="DESKTOP-9K31RKJ" time="0.078">
+  <properties/>
+  <testcase name="testExist()" classname="com.me92100984.member_post.mapper.PostMapperTests" time="0.004"/>
+  <testcase name="testList()" classname="com.me92100984.member_post.mapper.PostMapperTests" time="0.048"/>
+  <testcase name="testView()" classname="com.me92100984.member_post.mapper.PostMapperTests" time="0.024"/>
+  <system-out><![CDATA[[INFO ] 2024-12-20 14:30:15.382 member_post.mapper.PostMapperTests - Criteria(page=1, amount=10, category=2, type=null, keyword=null)
+[INFO ] 2024-12-20 14:30:15.419 jdbc.sqltiming - select tp.*, (select count(*) from tbl_attach ta where ta.pno = tp.pno) attach_flag 
+    from tbl_post tp
+    where cno = 2
+
+    order by 1 desc 
+    limit 10 offset 0
+ {executed in 4 msec}
+[INFO ] 2024-12-20 14:30:15.424 jdbc.resultsettable - 
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+|pno |title     |writer |content         |view_count |regdate               |updatedate            |cno |attach_flag |
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+|290 |33        |abcd   |333             |1          |2024-12-20 03:53:21.0 |2024-12-20 03:53:21.0 |2   |true        |
+|288 |dddd11111 |abcd   |dddddd111111111 |13         |2024-12-17 03:13:53.0 |2024-12-17 08:37:03.0 |2   |false       |
+|287 |안녕 스프링33  |abcd   |33              |5          |2024-12-16 07:40:30.0 |2024-12-17 03:06:45.0 |2   |false       |
+|286 |왜?        |abcd   |22              |2          |2024-12-16 07:08:34.0 |2024-12-16 07:08:34.0 |2   |false       |
+|284 |제목        |null   |내용              |3          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|283 |제목        |null   |내용              |0          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|282 |제목        |null   |내용              |0          |2024-12-13 03:06:47.0 |2024-12-13 03:06:47.0 |2   |false       |
+|281 |asdf      |mekwon |asdf            |2          |2024-12-09 01:45:01.0 |2024-12-09 01:45:01.0 |2   |false       |
+|280 |          |mekwon |                |0          |2024-11-26 02:27:48.0 |2024-11-26 02:27:48.0 |2   |false       |
+|279 |att       |mekwon |at              |154        |2024-11-14 01:28:15.0 |2024-11-14 01:28:15.0 |2   |true        |
+|----|----------|-------|----------------|-----------|----------------------|----------------------|----|------------|
+
+[INFO ] 2024-12-20 14:30:15.434 jdbc.sqltiming - select tp.*, 1 from tbl_post tp where pno = 279
+ {executed in 4 msec}
+[INFO ] 2024-12-20 14:30:15.436 jdbc.resultsettable - 
+|----|------|-------|--------|-----------|----------------------|----------------------|----|---------|
+|pno |title |writer |content |view_count |regdate               |updatedate            |cno |1        |
+|----|------|-------|--------|-----------|----------------------|----------------------|----|---------|
+|279 |att   |mekwon |at      |154        |2024-11-14 01:28:15.0 |2024-11-14 01:28:15.0 |2   |[unread] |
+|----|------|-------|--------|-----------|----------------------|----------------------|----|---------|
+
+[INFO ] 2024-12-20 14:30:15.436 member_post.mapper.PostMapperTests - Post(pno=279, title=att, writer=mekwon, content=at, viewCount=154, regdate=Thu Nov 14 01:28:15 KST 2024, updatedate=Thu Nov 14 01:28:15 KST 2024, cno=2, attachFlag=null, attachs=[])
+[INFO ] 2024-12-20 14:30:15.447 jdbc.sqltiming - select tp.*, 1 from tbl_post tp where pno = 279
+ {executed in 4 msec}
+[INFO ] 2024-12-20 14:30:15.449 jdbc.resultsettable - 
+|----|------|-------|--------|-----------|----------------------|----------------------|----|---------|
+|pno |title |writer |content |view_count |regdate               |updatedate            |cno |1        |
+|----|------|-------|--------|-----------|----------------------|----------------------|----|---------|
+|279 |att   |mekwon |at      |154        |2024-11-14 01:28:15.0 |2024-11-14 01:28:15.0 |2   |[unread] |
+|----|------|-------|--------|-----------|----------------------|----------------------|----|---------|
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

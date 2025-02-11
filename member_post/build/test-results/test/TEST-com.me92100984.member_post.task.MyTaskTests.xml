@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.member_post.task.MyTaskTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-20T05:30:15" hostname="DESKTOP-9K31RKJ" time="0.004">
+  <properties/>
+  <testcase name="testPrintTime()" classname="com.me92100984.member_post.task.MyTaskTests" time="0.004"/>
+  <system-out><![CDATA[[INFO ] 2024-12-20 14:30:15.639 member_post.task.MyTask - 2024/12/20 14:30:15.638
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

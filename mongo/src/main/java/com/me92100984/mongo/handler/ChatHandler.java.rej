@@ -1,0 +1,9 @@
+diff a/mongo/src/main/java/com/me92100984/mongo/handler/ChatHandler.java b/mongo/src/main/java/com/me92100984/mongo/handler/ChatHandler.java	(rejected hunks)
+@@ -24,6 +24,7 @@
+   @Override
+   protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+     for(WebSocketSession ws : sessions) {
++      log.info(message.getPayload());
+       ws.sendMessage(new TextMessage(message.getPayload()));
+     }
+   }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.member_post.service.MemberServiceTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-12-20T05:30:15" hostname="DESKTOP-9K31RKJ" time="0.016">
+  <properties/>
+  <testcase name="testFindby()" classname="com.me92100984.member_post.service.MemberServiceTests" time="0.012"/>
+  <testcase name="testSignup()" classname="com.me92100984.member_post.service.MemberServiceTests" time="0.004"/>
+  <system-out><![CDATA[[INFO ] 2024-12-20 14:30:15.486 jdbc.sqltiming - select * from tbl_member where id = 'mekwon'
+ {executed in 5 msec}
+[INFO ] 2024-12-20 14:30:15.487 jdbc.resultsettable - 
+|-------|-----|-----|---------------------|-----------------------|------------|----------------------|
+|id     |pw   |name |email                |road_addr              |detail_addr |regdate               |
+|-------|-----|-----|---------------------|-----------------------|------------|----------------------|
+|mekwon |asdf |권미은  |me92100984@gmail.com |서울특별시 구로구 구일로 62 (구로동) |1234        |2024-11-04 04:10:05.0 |
+|-------|-----|-----|---------------------|-----------------------|------------|----------------------|
+
+[INFO ] 2024-12-20 14:30:15.487 member_post.service.MemberServiceTests - Member(id=mekwon, pw=asdf, name=권미은, email=me92100984@gmail.com, roadAddr=서울특별시 구로구 구일로 62 (구로동), detailAddr=1234, regdate=Mon Nov 04 04:10:05 KST 2024)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.member_post.MemberPostApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-12-20T05:30:14" hostname="DESKTOP-9K31RKJ" time="0.95">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.me92100984.member_post.MemberPostApplicationTests" time="0.95"/>
+  <system-out><![CDATA[2024-12-20T05:30:10.030620400Z Test worker INFO Starting configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml, lastModified=2024-12-20T05:27:44.601Z]...
+2024-12-20T05:30:10.034610500Z Test worker INFO Start watching for changes to C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml every 0 seconds
+2024-12-20T05:30:10.035607700Z Test worker INFO Configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml, lastModified=2024-12-20T05:27:44.601Z] started.
+2024-12-20T05:30:10.037601500Z Test worker INFO Stopping configuration org.apache.logging.log4j.core.config.DefaultConfiguration@5f031ebd...
+2024-12-20T05:30:10.038599200Z Test worker INFO Configuration org.apache.logging.log4j.core.config.DefaultConfiguration@5f031ebd stopped.
+2024-12-20T05:30:10.811298100Z Test worker INFO Starting configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml, lastModified=2024-12-20T05:27:44.601Z]...
+2024-12-20T05:30:10.812295300Z Test worker INFO Start watching for changes to C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml every 0 seconds
+2024-12-20T05:30:10.812295300Z Test worker INFO Configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml, lastModified=2024-12-20T05:27:44.601Z] started.
+2024-12-20T05:30:10.813292500Z Test worker INFO Stopping configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml, lastModified=2024-12-20T05:27:44.601Z]...
+2024-12-20T05:30:10.813292500Z Test worker INFO Configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\member_post\build\resources\main\log4j2.xml, lastModified=2024-12-20T05:27:44.601Z] stopped.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::       (v3.4.1-SNAPSHOT)
+
+[INFO ] 2024-12-20 14:30:10.914 me92100984.member_post.MemberPostApplicationTests - Starting MemberPostApplicationTests using Java 17.0.11 with PID 14564 (started by tj in C:\javaworkspace\spring-boot\member_post)
+[INFO ] 2024-12-20 14:30:10.922 me92100984.member_post.MemberPostApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[WARN ] 2024-12-20 14:30:13.590 servlet.resource.ResourceHandlerUtils - Appended trailing slash to static resource location: classpath:/static/
+[INFO ] 2024-12-20 14:30:14.016 me92100984.member_post.MemberPostApplicationTests - Started MemberPostApplicationTests in 3.511 seconds (process running for 5.521)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

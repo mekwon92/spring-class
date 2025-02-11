@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.guestbook.GuestbookApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-01-06T01:39:18" hostname="DESKTOP-9K31RKJ" time="0.625">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.me92100984.guestbook.GuestbookApplicationTests" time="0.625"/>
+  <system-out><![CDATA[2025-01-06T01:39:10.477693200Z Test worker INFO Starting configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml, lastModified=2025-01-06T01:39:04.905Z]...
+2025-01-06T01:39:10.486741800Z Test worker INFO Start watching for changes to C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml every 0 seconds
+2025-01-06T01:39:10.487740Z Test worker INFO Configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml, lastModified=2025-01-06T01:39:04.905Z] started.
+2025-01-06T01:39:10.491729600Z Test worker INFO Stopping configuration org.apache.logging.log4j.core.config.DefaultConfiguration@546ccad7...
+2025-01-06T01:39:10.492726600Z Test worker INFO Configuration org.apache.logging.log4j.core.config.DefaultConfiguration@546ccad7 stopped.
+[INFO ] 2025-01-06 10:39:10.659 context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.me92100984.guestbook.GuestbookApplicationTests]: GuestbookApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2025-01-06 10:39:10.811 test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.me92100984.guestbook.GuestbookApplication for test class com.me92100984.guestbook.GuestbookApplicationTests
+2025-01-06T01:39:11.315688600Z Test worker INFO Starting configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml, lastModified=2025-01-06T01:39:04.905Z]...
+2025-01-06T01:39:11.316782200Z Test worker INFO Start watching for changes to C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml every 0 seconds
+2025-01-06T01:39:11.316782200Z Test worker INFO Configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml, lastModified=2025-01-06T01:39:04.905Z] started.
+2025-01-06T01:39:11.317779900Z Test worker INFO Stopping configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml, lastModified=2025-01-06T01:39:04.905Z]...
+2025-01-06T01:39:11.317779900Z Test worker INFO Configuration XmlConfiguration[location=C:\javaworkspace\spring-boot\guestbook\build\resources\main\log4j2.xml, lastModified=2025-01-06T01:39:04.905Z] stopped.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+[INFO ] 2025-01-06 10:39:11.419 me92100984.guestbook.GuestbookApplicationTests - Starting GuestbookApplicationTests using Java 17.0.11 with PID 5992 (started by tj in C:\javaworkspace\spring-boot\guestbook)
+[INFO ] 2025-01-06 10:39:11.420 me92100984.guestbook.GuestbookApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2025-01-06 10:39:12.393 repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2025-01-06 10:39:12.497 repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 4 JPA repository interfaces.
+[INFO ] 2025-01-06 10:39:13.402 internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2025-01-06 10:39:13.489 org.hibernate.Version - HHH000412: Hibernate ORM core version 6.3.1.Final
+[INFO ] 2025-01-06 10:39:13.543 cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+[INFO ] 2025-01-06 10:39:13.876 jpa.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+[INFO ] 2025-01-06 10:39:13.923 zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2025-01-06 10:39:14.090 hikari.pool.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@54f25b42
+[INFO ] 2025-01-06 10:39:14.092 zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2025-01-06 10:39:14.134 jdbc.sqltiming - SELECT @@character_set_database, @@sql_mode
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:15.726 platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[INFO ] 2025-01-06 10:39:15.782 jdbc.sqltiming - select table_name from information_schema.TABLES where table_schema=database() and table_type='SEQUENCE'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:15.783 jdbc.resultsettable - 
+|-----------|
+|table_name |
+|-----------|
+|-----------|
+
+[INFO ] 2025-01-06 10:39:15.843 jdbc.sqltiming - select * from `guestbook`.`tbl_member` where 1=0
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:15.846 jdbc.resultsettable - 
+|------|--------|--------|-----|---------|
+|email |moddate |regdate |name |password |
+|------|--------|--------|-----|---------|
+|------|--------|--------|-----|---------|
+
+[INFO ] 2025-01-06 10:39:15.879 jdbc.sqltiming - select * from `guestbook`.`tbl_board` where 1=0
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:15.879 jdbc.resultsettable - 
+|----|--------|--------|--------|------|-------------|
+|bno |moddate |regdate |content |title |member_email |
+|----|--------|--------|--------|------|-------------|
+|----|--------|--------|--------|------|-------------|
+
+[INFO ] 2025-01-06 10:39:15.883 orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2025-01-06 10:39:16.509 repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+[WARN ] 2025-01-06 10:39:17.717 orm.jpa.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2025-01-06 10:39:17.766 web.servlet.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+[INFO ] 2025-01-06 10:39:18.465 me92100984.guestbook.GuestbookApplicationTests - Started GuestbookApplicationTests in 7.463 seconds (process running for 9.705)
+]]></system-out>
+  <system-err><![CDATA[ANTLR Tool version 4.10.1 used for code generation does not match the current runtime version 4.13.0
+ANTLR Runtime version 4.10.1 used for parser compilation does not match the current runtime version 4.13.0
+ANTLR Tool version 4.10.1 used for code generation does not match the current runtime version 4.13.0
+ANTLR Runtime version 4.10.1 used for parser compilation does not match the current runtime version 4.13.0
+]]></system-err>
+</testsuite>

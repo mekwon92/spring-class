@@ -1,0 +1,1994 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.me92100984.guestbook.repository.MemberRepositoryTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-01-06T01:39:27" hostname="DESKTOP-9K31RKJ" time="0.836">
+  <properties/>
+  <testcase name="testExist()" classname="com.me92100984.guestbook.repository.MemberRepositoryTests" time="0.003"/>
+  <testcase name="testSelectOne()" classname="com.me92100984.guestbook.repository.MemberRepositoryTests" time="0.008"/>
+  <testcase name="testInsert()" classname="com.me92100984.guestbook.repository.MemberRepositoryTests" time="0.816"/>
+  <testcase name="testUpdate()" classname="com.me92100984.guestbook.repository.MemberRepositoryTests" time="0.003"/>
+  <testcase name="testSelectlist()" classname="com.me92100984.guestbook.repository.MemberRepositoryTests" time="0.003"/>
+  <system-out><![CDATA[[INFO ] 2025-01-06 10:39:27.182 context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.me92100984.guestbook.repository.MemberRepositoryTests]: MemberRepositoryTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[INFO ] 2025-01-06 10:39:27.188 test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.me92100984.guestbook.GuestbookApplication for test class com.me92100984.guestbook.repository.MemberRepositoryTests
+[INFO ] 2025-01-06 10:39:27.193 guestbook.repository.MemberRepositoryTests - org.springframework.data.jpa.repository.support.SimpleJpaRepository@122e63ae
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.227 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user2@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.228 jdbc.resultsettable - 
+|---------|---------------------------|------|---------|---------------------------|
+|email    |moddate                    |name  |password |regdate                    |
+|---------|---------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.702509 |user2 |1234     |2024-12-30 12:43:41.214351 |
+|---------|---------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.235 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user3@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.236 jdbc.resultsettable - 
+|---------|---------------------------|------|---------|---------------------------|
+|email    |moddate                    |name  |password |regdate                    |
+|---------|---------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.731431 |user3 |1234     |2024-12-30 12:43:41.275189 |
+|---------|---------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.242 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user4@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.243 jdbc.resultsettable - 
+|---------|---------------------------|------|---------|---------------------------|
+|email    |moddate                    |name  |password |regdate                    |
+|---------|---------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.731431 |user4 |1234     |2024-12-30 12:43:41.285163 |
+|---------|---------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.250 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user5@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.251 jdbc.resultsettable - 
+|---------|---------------------------|------|---------|---------------------------|
+|email    |moddate                    |name  |password |regdate                    |
+|---------|---------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.731431 |user5 |1234     |2024-12-30 12:43:41.291146 |
+|---------|---------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.258 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user6@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.258 jdbc.resultsettable - 
+|---------|--------------------------|------|---------|---------------------------|
+|email    |moddate                   |name  |password |regdate                    |
+|---------|--------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.73243 |user6 |1234     |2024-12-30 12:43:41.296133 |
+|---------|--------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.266 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user7@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.267 jdbc.resultsettable - 
+|---------|--------------------------|------|---------|---------------------------|
+|email    |moddate                   |name  |password |regdate                    |
+|---------|--------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.73243 |user7 |1234     |2024-12-30 12:43:41.303115 |
+|---------|--------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.274 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user8@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.274 jdbc.resultsettable - 
+|---------|--------------------------|------|---------|---------------------------|
+|email    |moddate                   |name  |password |regdate                    |
+|---------|--------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.73243 |user8 |1234     |2024-12-30 12:43:41.308101 |
+|---------|--------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.282 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user9@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.283 jdbc.resultsettable - 
+|---------|--------------------------|------|---------|---------------------------|
+|email    |moddate                   |name  |password |regdate                    |
+|---------|--------------------------|------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.73243 |user9 |1234     |2024-12-30 12:43:41.314084 |
+|---------|--------------------------|------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.291 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user10@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.291 jdbc.resultsettable - 
+|---------|--------------------------|-------|---------|---------------------------|
+|email    |moddate                   |name   |password |regdate                    |
+|---------|--------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.73243 |user10 |1234     |2024-12-30 12:43:41.319071 |
+|---------|--------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.299 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user11@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.300 jdbc.resultsettable - 
+|---------|--------------------------|-------|---------|---------------------------|
+|email    |moddate                   |name   |password |regdate                    |
+|---------|--------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.73243 |user11 |1234     |2024-12-30 12:43:41.325055 |
+|---------|--------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.308 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user12@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.308 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.733427 |user12 |1234     |2024-12-30 12:43:41.331039 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.315 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user13@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.320 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.733427 |user13 |1234     |2024-12-30 12:43:41.338021 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.327 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user14@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.327 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.733427 |user14 |1234     |2024-12-30 12:43:41.345002 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.334 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user15@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.334 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.733427 |user15 |1234     |2024-12-30 12:43:41.350986 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.342 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user16@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.342 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.733427 |user16 |1234     |2024-12-30 12:43:41.355973 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.349 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user17@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.350 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.733427 |user17 |1234     |2024-12-30 12:43:41.363951 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.357 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user18@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.358 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.734425 |user18 |1234     |2024-12-30 12:43:41.369936 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.366 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user19@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.368 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.734425 |user19 |1234     |2024-12-30 12:43:41.374921 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.376 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user20@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.376 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.734425 |user20 |1234     |2024-12-30 12:43:41.380906 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.385 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user21@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.385 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.734425 |user21 |1234     |2024-12-30 12:43:41.388885 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.393 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user22@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.393 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.734425 |user22 |1234     |2024-12-30 12:43:41.395866 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.401 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user23@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.401 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|--------------------------|
+|email    |moddate                    |name   |password |regdate                   |
+|---------|---------------------------|-------|---------|--------------------------|
+|[unread] |2024-12-30 12:51:34.734425 |user23 |1234     |2024-12-30 12:43:41.40185 |
+|---------|---------------------------|-------|---------|--------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.411 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user24@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.411 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.735422 |user24 |1234     |2024-12-30 12:43:41.407834 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.418 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user25@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.418 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.735422 |user25 |1234     |2024-12-30 12:43:41.413818 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.426 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user26@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.426 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.735422 |user26 |1234     |2024-12-30 12:43:41.419803 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.433 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user27@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.434 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.735422 |user27 |1234     |2024-12-30 12:43:41.426783 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.441 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user28@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.441 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.735422 |user28 |1234     |2024-12-30 12:43:41.433765 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.448 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user29@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.449 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.735422 |user29 |1234     |2024-12-30 12:43:41.439749 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.455 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user30@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.456 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.736419 |user30 |1234     |2024-12-30 12:43:41.444735 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.462 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user31@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.463 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|--------------------------|
+|email    |moddate                    |name   |password |regdate                   |
+|---------|---------------------------|-------|---------|--------------------------|
+|[unread] |2024-12-30 12:51:34.737415 |user31 |1234     |2024-12-30 12:43:41.45072 |
+|---------|---------------------------|-------|---------|--------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.470 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user32@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.470 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.737415 |user32 |1234     |2024-12-30 12:43:41.457701 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.478 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user33@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.478 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.738412 |user33 |1234     |2024-12-30 12:43:41.463685 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.485 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user34@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.485 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.738412 |user34 |1234     |2024-12-30 12:43:41.469669 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.493 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user35@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.493 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.738412 |user35 |1234     |2024-12-30 12:43:41.475653 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.501 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user36@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.502 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.738412 |user36 |1234     |2024-12-30 12:43:41.483631 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.509 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user37@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.510 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.740411 |user37 |1234     |2024-12-30 12:43:41.490613 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.517 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user38@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.517 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.740411 |user38 |1234     |2024-12-30 12:43:41.496597 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.525 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user39@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.526 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.740411 |user39 |1234     |2024-12-30 12:43:41.502582 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.532 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user40@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.533 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.741405 |user40 |1234     |2024-12-30 12:43:41.508564 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.541 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user41@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.541 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.741405 |user41 |1234     |2024-12-30 12:43:41.514549 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.549 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user42@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.549 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.741405 |user42 |1234     |2024-12-30 12:43:41.556437 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.557 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user43@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.557 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.741405 |user43 |1234     |2024-12-30 12:43:41.563418 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.565 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user44@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.566 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.741405 |user44 |1234     |2024-12-30 12:43:41.569402 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.573 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user45@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.573 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.741405 |user45 |1234     |2024-12-30 12:43:41.576383 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.580 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user46@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.582 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.741405 |user46 |1234     |2024-12-30 12:43:41.582367 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.589 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user47@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.590 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.742402 |user47 |1234     |2024-12-30 12:43:41.589349 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.599 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user48@a.com'
+ {executed in 9 msec}
+[INFO ] 2025-01-06 10:39:27.599 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|--------------------------|
+|email    |moddate                    |name   |password |regdate                   |
+|---------|---------------------------|-------|---------|--------------------------|
+|[unread] |2024-12-30 12:51:34.742402 |user48 |1234     |2024-12-30 12:43:41.59633 |
+|---------|---------------------------|-------|---------|--------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.606 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user49@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.606 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.742402 |user49 |1234     |2024-12-30 12:43:41.603311 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.613 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user50@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.614 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.742402 |user50 |1234     |2024-12-30 12:43:41.608298 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.623 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user51@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.623 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.742402 |user51 |1234     |2024-12-30 12:43:41.615279 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.629 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user52@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.629 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.742402 |user52 |1234     |2024-12-30 12:43:41.621263 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.637 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user53@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.637 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.743399 |user53 |1234     |2024-12-30 12:43:41.627247 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.644 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user54@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.644 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.743399 |user54 |1234     |2024-12-30 12:43:41.633231 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.650 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user55@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.650 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.743399 |user55 |1234     |2024-12-30 12:43:41.639215 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.658 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user56@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.658 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|-------------------------|
+|email    |moddate                    |name   |password |regdate                  |
+|---------|---------------------------|-------|---------|-------------------------|
+|[unread] |2024-12-30 12:51:34.743399 |user56 |1234     |2024-12-30 12:43:41.6452 |
+|---------|---------------------------|-------|---------|-------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.665 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user57@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.665 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.743399 |user57 |1234     |2024-12-30 12:43:41.651183 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.673 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user58@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.673 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.743399 |user58 |1234     |2024-12-30 12:43:41.657167 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.681 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user59@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.682 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.744396 |user59 |1234     |2024-12-30 12:43:41.663152 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.690 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user60@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.690 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.744396 |user60 |1234     |2024-12-30 12:43:41.669136 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.696 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user61@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.697 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|--------------------------|
+|email    |moddate                    |name   |password |regdate                   |
+|---------|---------------------------|-------|---------|--------------------------|
+|[unread] |2024-12-30 12:51:34.744396 |user61 |1234     |2024-12-30 12:43:41.67512 |
+|---------|---------------------------|-------|---------|--------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.705 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user62@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.705 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.744396 |user62 |1234     |2024-12-30 12:43:41.681103 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.713 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user63@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.713 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.744396 |user63 |1234     |2024-12-30 12:43:41.687087 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.720 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user64@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.720 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.744396 |user64 |1234     |2024-12-30 12:43:41.692074 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.728 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user65@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.728 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.744396 |user65 |1234     |2024-12-30 12:43:41.699056 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.735 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user66@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.735 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user66 |1234     |2024-12-30 12:43:41.705039 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.742 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user67@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.742 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user67 |1234     |2024-12-30 12:43:41.711024 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.749 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user68@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.749 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user68 |1234     |2024-12-30 12:43:41.717007 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.756 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user69@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.756 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user69 |1234     |2024-12-30 12:43:41.723989 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.765 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user70@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.765 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user70 |1234     |2024-12-30 12:43:41.729973 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.772 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user71@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.772 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user71 |1234     |2024-12-30 12:43:41.735957 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.779 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user72@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.779 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user72 |1234     |2024-12-30 12:43:41.741941 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.787 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user73@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.787 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user73 |1234     |2024-12-30 12:43:41.748921 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.795 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user74@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.795 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.745394 |user74 |1234     |2024-12-30 12:43:41.754906 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.802 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user75@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.802 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user75 |1234     |2024-12-30 12:43:41.760891 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.809 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user76@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.809 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user76 |1234     |2024-12-30 12:43:41.766875 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.815 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user77@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.815 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|--------------------------|
+|email    |moddate                    |name   |password |regdate                   |
+|---------|---------------------------|-------|---------|--------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user77 |1234     |2024-12-30 12:43:41.77186 |
+|---------|---------------------------|-------|---------|--------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.823 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user78@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.823 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user78 |1234     |2024-12-30 12:43:41.777845 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.834 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user79@a.com'
+ {executed in 10 msec}
+[INFO ] 2025-01-06 10:39:27.837 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user79 |1234     |2024-12-30 12:43:41.782831 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.845 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user80@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.846 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user80 |1234     |2024-12-30 12:43:41.789813 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.854 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user81@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.855 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user81 |1234     |2024-12-30 12:43:41.795797 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.867 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user82@a.com'
+ {executed in 11 msec}
+[INFO ] 2025-01-06 10:39:27.869 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.747388 |user82 |1234     |2024-12-30 12:43:41.800784 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.877 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user83@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.878 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|--------------------------|
+|email    |moddate                    |name   |password |regdate                   |
+|---------|---------------------------|-------|---------|--------------------------|
+|[unread] |2024-12-30 12:51:34.759356 |user83 |1234     |2024-12-30 12:43:41.80577 |
+|---------|---------------------------|-------|---------|--------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.886 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user84@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.887 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.759356 |user84 |1234     |2024-12-30 12:43:41.813749 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.894 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user85@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.894 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.759356 |user85 |1234     |2024-12-30 12:43:41.819733 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.902 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user86@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.902 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.760354 |user86 |1234     |2024-12-30 12:43:41.825718 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.910 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user87@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.910 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|-------------------------|
+|email    |moddate                    |name   |password |regdate                  |
+|---------|---------------------------|-------|---------|-------------------------|
+|[unread] |2024-12-30 12:51:34.760354 |user87 |1234     |2024-12-30 12:43:41.8317 |
+|---------|---------------------------|-------|---------|-------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.917 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user88@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.917 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.760354 |user88 |1234     |2024-12-30 12:43:41.837684 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.924 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user89@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.924 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.760354 |user89 |1234     |2024-12-30 12:43:41.842671 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.931 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user90@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.931 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.760354 |user90 |1234     |2024-12-30 12:43:41.848656 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.939 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user91@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.939 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.760354 |user91 |1234     |2024-12-30 12:43:41.853642 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.947 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user92@a.com'
+ {executed in 8 msec}
+[INFO ] 2025-01-06 10:39:27.948 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.760354 |user92 |1234     |2024-12-30 12:43:41.859626 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.955 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user93@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.955 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|--------------------------|
+|email    |moddate                    |name   |password |regdate                   |
+|---------|---------------------------|-------|---------|--------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user93 |1234     |2024-12-30 12:43:41.86561 |
+|---------|---------------------------|-------|---------|--------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.962 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user94@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.962 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user94 |1234     |2024-12-30 12:43:41.872591 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.970 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user95@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.970 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user95 |1234     |2024-12-30 12:43:41.878576 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.977 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user96@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.977 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user96 |1234     |2024-12-30 12:43:41.883562 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.983 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user97@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:27.983 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user97 |1234     |2024-12-30 12:43:41.889546 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.990 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user98@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.990 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user98 |1234     |2024-12-30 12:43:41.895531 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:27.997 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user99@a.com'
+ {executed in 7 msec}
+[INFO ] 2025-01-06 10:39:27.998 jdbc.resultsettable - 
+|---------|---------------------------|-------|---------|---------------------------|
+|email    |moddate                    |name   |password |regdate                    |
+|---------|---------------------------|-------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user99 |1234     |2024-12-30 12:43:41.901514 |
+|---------|---------------------------|-------|---------|---------------------------|
+
+Hibernate: 
+    select
+        m1_0.email,
+        m1_0.moddate,
+        m1_0.name,
+        m1_0.password,
+        m1_0.regdate 
+    from
+        tbl_member m1_0 
+    where
+        m1_0.email=?
+[INFO ] 2025-01-06 10:39:28.006 jdbc.sqltiming - select m1_0.email,m1_0.moddate,m1_0.name,m1_0.password,m1_0.regdate from tbl_member m1_0 where m1_0.email='user100@a.com'
+ {executed in 6 msec}
+[INFO ] 2025-01-06 10:39:28.006 jdbc.resultsettable - 
+|---------|---------------------------|--------|---------|---------------------------|
+|email    |moddate                    |name    |password |regdate                    |
+|---------|---------------------------|--------|---------|---------------------------|
+|[unread] |2024-12-30 12:51:34.761352 |user100 |1234     |2024-12-30 12:43:41.907498 |
+|---------|---------------------------|--------|---------|---------------------------|
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
