@@ -11,5 +11,5 @@ import java.util.List;
 public interface CartItemRepository extends JpaRepository<CartItem, Long> {
   List<CartItem> findByCartCno(Long cno);
   CartItem findByCartAndProductAndSubday(Cart cart, Product product, long subday);
-
+  void deleteAllByCartCno(Long cno);
 }

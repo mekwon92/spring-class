@@ -2,6 +2,7 @@ package com.pilllaw.pilllaw.repository.order;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.HashMap;
 import java.util.List;
@@ -30,55 +31,65 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 @Transactional
 public class CartRepositoryTests {
-  @Autowired
-  private CartRepository cartRepository;
+    @Autowired
+    private CartRepository cartRepository;
 
-  @Autowired
-  private CartItemRepository cartItemRepository;
+    @Autowired
+    private CartItemRepository cartItemRepository;
 
-  @Test
-@Rollback(false)
-public void testMergeCartItems() {
-    // 중복되는 CartItems를 조회하여 병합하기
-    List<CartItem> cartItems = cartItemRepository.findByCartCno(2L);
+    @Test
+    @Rollback(false)
+    public void testInsertCartWithItems() { 
+        
+        Cart savedCart = Cart.builder().member(Member.builder().mno(2L).build()).build();
+        cartRepository.save(savedCart);
 
-    // 중복 처리
-    Map<String, CartItem> mergedItems = new HashMap<>();
+        CartItem ci1 = CartItem.builder().cart(savedCart).product(Product.builder().pno(1L).build()).subday(60)
+                .quantity(2).build();
+        CartItem ci2 = CartItem.builder().cart(savedCart).product(Product.builder().pno(2L).build()).subday(60)
+                .quantity(1).build();
+        CartItem ci3 = CartItem.builder().cart(savedCart).product(Product.builder().pno(3L).build()).subday(30)
+                .quantity(2).build();
+        CartItem ci4 = CartItem.builder().cart(savedCart).product(Product.builder().pno(4L).build()).subday(30)
+                .quantity(3).build();
 
-    for (CartItem item : cartItems) {
-        // 중복 기준: Cart + Product + Subday
-        String key = item.getProduct().getPno() + "-" + item.getSubday();
+        savedCart.getCartItems().add(ci1);
+        savedCart.getCartItems().add(ci2);
+        savedCart.getCartItems().add(ci3);
+        savedCart.getCartItems().add(ci4);
 
-        // 이미 존재하는 경우, quantity 합침
-        if (mergedItems.containsKey(key)) {
-            CartItem existingItem = mergedItems.get(key);
-            existingItem.setQuantity(existingItem.getQuantity() + item.getQuantity());
-        } else {
-            mergedItems.put(key, item);
-        }
+        cartItemRepository.saveAll(List.of(ci1, ci2, ci3, ci4));
+
+        cartRepository.save(savedCart);
+
+        List<CartItem> cartItems = savedCart.getCartItems();
+        log.info(cartItems);
     }
 
-    // 중복된 CartItem들을 삭제하고 병합된 결과를 저장
-    for (CartItem item : cartItems) {
-        // 삭제된 CartItem
-        if (!mergedItems.containsKey(item.getProduct().getPno() + "-" + item.getSubday())) {
-            // 해당 항목 삭제
-            cartItemRepository.delete(item);
-        }
+    @Test
+    public void testListCartItems() {
+        List<CartItem> cartItems = cartItemRepository.findByCartCno(2L);
+        log.info(cartItems);
     }
 
-    // 삭제 후 flush()를 호출하여 데이터베이스에 반영
-    cartItemRepository.flush();
-    
-    // 병합된 CartItem들을 저장
-    for (CartItem item : mergedItems.values()) {
-        cartItemRepository.save(item);
+    @Test
+    @Rollback(false)
+    public void testDeleteAll() {
+        cartItemRepository.deleteAllByCartCno(2L);
     }
 
-    // 결과 확인
-    List<CartItem> updatedCartItems = cartItemRepository.findByCartCno(2L);
-    updatedCartItems.forEach(item -> log.info("Updated CartItem: {}", item));
-}
+    @Test
+    @Rollback(false)
+    public void testDeleteOne() {
+        cartItemRepository.deleteById(17L);
+    }
 
+    @Test
+    @Rollback(false) 
+    public void testUpdate() {
+        CartItem cartItem = cartItemRepository.findById(16L).orElseThrow(() -> new RuntimeException("CartItem not found"));
+        cartItem.setQuantity(2L);
+        cartItemRepository.save(cartItem);
+    }
 
 }

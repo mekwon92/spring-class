@@ -1,4 +1,4 @@
-package com.pilllaw.pilllaw.repository.order;
+package com.pilllaw.pilllaw.repository;
 
 
 import java.util.Date;
