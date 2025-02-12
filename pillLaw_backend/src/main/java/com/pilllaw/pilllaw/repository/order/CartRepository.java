@@ -6,5 +6,5 @@ import com.pilllaw.pilllaw.entity.order.Cart;
 
 
 public interface CartRepository extends JpaRepository<Cart, Long> {
-  // Cart findByMemberMno(Long mno);
+  Cart findByMemberMno(Long mno);
 }

@@ -1,63 +1,56 @@
 package com.pilllaw.pilllaw.entity.member;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.pilllaw.pilllaw.entity.BaseEntity;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
-@Table(name = "tbl_member")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Entity(name = "tbl_member")
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
 @ToString
-public class Member extends BaseEntity {
+public class Member extends BaseEntity{
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long mno;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long mno;
+  private String email;
 
-    @Column(nullable = false, length = 500)
-    private String email;
+  private String password;
 
-    @Column(nullable = false, length = 500)
-    private String password;
+  private String name;
 
-    @Column(nullable = false, length = 500)
-    private String name;
+  private String nickname;
 
-    @Column(nullable = false, length = 500)
-    private String nickname;
+  private String tel;
 
-    @Column(nullable = false, length = 500)
-    private String tel;
+  private boolean firstLogin;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private AccountType accountType;
+  @Builder.Default
+  @ElementCollection(fetch = FetchType.LAZY)
+  private Set<MemberRole> roleSet = new HashSet<>();
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private MemberRole memberRole;
+  public void addMemberRole(MemberRole memberRole) {
+    roleSet.add(memberRole);
+  }
 
-    @Column(nullable = false)
-    private Boolean firstLogin;
+  @Builder.Default
+  @ElementCollection(fetch = FetchType.LAZY)
+  private Set<MemberStatus> statusSet = new HashSet<>();
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private MemberStatus status;
+  public void addMemberStatus(MemberStatus memberStatus) {
+    statusSet.add(memberStatus);
+  }
 
-    public enum AccountType {
-        SOCIAL, NORMAL
-    }
+  @Builder.Default
+  @ElementCollection(fetch = FetchType.LAZY)
+  private Set<MemberAccount> accountSet = new HashSet<>();
 
-    public enum MemberRole {
-        ADMIN, USER, SUBSCRIBER
-    }
-
-    public enum MemberStatus {
-        LOCKED, DELETED, VERIFIED, SUSPENDED, INACTIVE
-    }
+  public void addMemberAccount(MemberAccount memberAccount) {
+    accountSet.add(memberAccount);
+  }
 }

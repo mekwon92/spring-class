@@ -43,10 +43,11 @@ public class Product extends BaseEntity {
     private String cname;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 500)
     private ProductType type;
 
     public enum ProductType {
-        일반, 구독_전용, 패키지, 얼리버드
-    }
+        NORMAL, SUBONLY, PACKAGE, EARLYBIRD
+      }
+      
 }
