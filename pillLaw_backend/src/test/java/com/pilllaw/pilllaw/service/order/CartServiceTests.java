@@ -57,7 +57,7 @@ public class CartServiceTests {
     @Test
     @Transactional
     public void testGetItemsByMemberMno() {
-        List<CartItem> cartItems = cartService.getItemsByMemberMno(3L);
+        List<CartItemDto> cartItems = cartService.getItemsByMemberMno(3L);
         cartItems.forEach(cartItem -> log.info("ITEM LIST " + cartItem.toString()));
     }
 
