@@ -17,7 +17,8 @@ public class ProductPrice extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long priceId;
+    @Column(name = "ppno") // 기존 price_id 컬럼을 ppno로 변경
+    private Long ppno;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pno", nullable = false)

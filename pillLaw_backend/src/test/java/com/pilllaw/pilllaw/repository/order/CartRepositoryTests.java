@@ -91,5 +91,4 @@ public class CartRepositoryTests {
         cartItem.setQuantity(2L);
         cartItemRepository.save(cartItem);
     }
-
 }

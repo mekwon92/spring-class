@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 public class ProductPriceDto {
 
-    private Long priceId;
+    private Long ppno;
     private Long pno;
     private Double price;
     private Double salePrice;
