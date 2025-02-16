@@ -9,7 +9,7 @@ import com.pilllaw.pilllaw.entity.order.Order;
 
 public interface OrderService {
   // 주문 추가
-  Long createOrder(OrderDto orderDto);
+  Long addOrder(OrderDto orderDto);
 
   // mno로 주문 리스트 조회
   List<OrderDto> getOrderByMemeber(Long mno);
@@ -20,8 +20,8 @@ public interface OrderService {
   // 전체주문 조회
   List<Order> getAllOrders();
 
-  //주문 삭제
-  void removeOrder(Long ono);
+  // 주문 삭제
+  int removeOrder(Long ono);
 
   // DTO -> Entity 변환
   default Order toEntity(OrderDto orderDto) {
@@ -46,6 +46,8 @@ public interface OrderService {
         .request(order.getRequest())
         .totalAmount(order.getTotalAmount())
         .usingPoint(order.getUsingPoint())
+        .regdate(order.getRegdate()) // 추가
+        .moddate(order.getModdate()) // 추가
         .build();
   }
 }

@@ -20,7 +20,7 @@ public class OrderServiceImpl implements OrderService {
   public OrderRepository orderRepository;
 
   @Override
-  public Long createOrder(OrderDto orderDto) {
+  public Long addOrder(OrderDto orderDto) {
     Order order = toEntity(orderDto);
     return orderRepository.save(order).getOno();
   }
@@ -41,7 +41,8 @@ public class OrderServiceImpl implements OrderService {
   }
 
   @Override
-  public void removeOrder(Long ono) {
+  public int removeOrder(Long ono) {
     orderRepository.deleteById(ono);
+    return 1;
   }
 }

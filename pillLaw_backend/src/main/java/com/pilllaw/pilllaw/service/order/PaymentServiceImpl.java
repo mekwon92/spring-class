@@ -1,35 +1,51 @@
 package com.pilllaw.pilllaw.service.order;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pilllaw.pilllaw.dto.order.CartItemDto;
-import com.pilllaw.pilllaw.dto.order.PaymentDto;
+import com.pilllaw.pilllaw.entity.order.Order;
 import com.pilllaw.pilllaw.entity.order.OrderItem;
 import com.pilllaw.pilllaw.entity.product.Product;
+import com.pilllaw.pilllaw.repository.order.OrderItemRepository;
+import com.pilllaw.pilllaw.repository.order.OrderRepository;
 
 import lombok.RequiredArgsConstructor;
 
-public class PaymentServiceImpl {
+@Service
+@RequiredArgsConstructor
+public class PaymentServiceImpl implements PaymentService {
 
-  // @Override
-  // @Transactional
-  // public void processOrderItems(Long ono, List<CartItemDto> cartItems) {
-  //   Order order = orderRepository.findById(ono)
-  //       .orElseThrow(() -> new RuntimeException("주문을 찾을 수 없습니다."));
+  @Autowired
+  private OrderRepository orderRepository;
 
-  //   List<OrderItem> orderItems = cartItems.stream().map(cartItem -> OrderItem.builder()
-  //       .order(order)
-  //       .product(Product.builder().pno(cartItem.getPno()).build())
-  //       .price(cartItem.getPrice())
-  //       .subday(cartItem.getSubday())
-  //       .quantity(cartItem.getQuantity())
-  //       .build()).toList();
+  @Autowired
+  private OrderItemRepository orderItemRepository;
 
-  //   orderItemRepository.saveAll(orderItems);
-  // }
+  // 결제 완료 후 orderitems에 저장할 예정임~
+  @Override
+  @Transactional
+  public void processOrderItems(Long ono, List<CartItemDto> cartItems) {
+    Order order = orderRepository.findById(ono)
+        .orElseThrow(() -> new RuntimeException("주문을 찾을 수 없습니다."));
 
+    List<OrderItem> orderItems = Optional.ofNullable(cartItems)
+        .orElse(Collections.emptyList())
+        .stream()
+        .map(cartItem -> OrderItem.builder()
+            .order(order)
+            .product(Product.builder().pno(cartItem.getPno()).build())
+            .price(cartItem.getPrice())
+            .subday(cartItem.getSubday())
+            .quantity(cartItem.getQuantity())
+            .build())
+        .toList();
+
+    orderItemRepository.saveAll(orderItems);
+  }
 }

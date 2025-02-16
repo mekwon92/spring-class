@@ -57,7 +57,6 @@ public class CartController {
     return ResponseEntity.ok(updated);
   }
 
-
   // 장바구니 아이템 삭제
   @DeleteMapping("/items/{cino}")
   public ResponseEntity<Integer> removeCartItem(@PathVariable Long cino) {

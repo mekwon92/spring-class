@@ -11,6 +11,6 @@ public class ProductPriceDto {
 
     private Long ppno;
     private Long pno;
-    private Double price;
-    private Double salePrice;
+    private Long price;
+    private Long salePrice;
 }
