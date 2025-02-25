@@ -8,12 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import com.pilllaw.pilllaw.dto.order.CartDto;
 import com.pilllaw.pilllaw.dto.order.CartItemDto;
-import com.pilllaw.pilllaw.entity.order.CartItem;
 import com.pilllaw.pilllaw.service.order.CartItemService;
 import com.pilllaw.pilllaw.service.order.CartService;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/cart")
